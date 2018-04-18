@@ -101,16 +101,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\Messenge.png" />
+    <Resource Include="resources\mes.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\Settings.png" />
+    <Resource Include="resources\settings.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\Groups.png" />
+    <Resource Include="resources\group.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\Calls.png" />
+    <Resource Include="resources\calls.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

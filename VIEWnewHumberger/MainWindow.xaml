@@ -22,7 +22,7 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="SideBar">
-                <EasingDoubleKeyFrame KeyTime="0" Value="70"/>
+                <EasingDoubleKeyFrame KeyTime="0" Value="100"/>
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="250"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
@@ -48,9 +48,13 @@
     </Window.Resources>
 
 
-    <Grid Background="#FF515151">
+    <Grid Background="#FF615C5C" IsEnabled="True">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
         <!--SideBarMenuProperties-->
-        <Grid x:Name="SideBar" HorizontalAlignment="Left" Width="70" Background="#444345">
+        <Grid x:Name="SideBar" HorizontalAlignment="Left" Width="70" Background="#444345" Grid.RowSpan="2">
             <StackPanel>
                 <Button x:Name="SideBarMenu" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="70" Height="70" Click="SideBarMenu_Click">
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
@@ -79,29 +83,29 @@
                 </Button>
 
                 <!--SubmenuButtons-->
-                <ListView BorderBrush="{x:Null}"  ScrollViewer.HorizontalScrollBarVisibility="Disabled">
-                    <ListViewItem x:Name="Messages" Height="50" Background="#444345" BorderBrush="LightGray">
+                <ListView ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderBrush="#FF444345" Background="#FF444345">
+                    <ListViewItem x:Name="Messages" Height="70" Background="#444345" BorderBrush="#444345">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="resources\Messenge.png" Width="40" Height="40" Margin="7"/>
-                            <TextBlock Text="Messages" VerticalAlignment="Center" Margin="10"></TextBlock>
+                            <Image Source="resources\mes.png" Width="50" Height="50" Margin="3"/>
+                            <TextBlock Text="Messages" FontSize="25" FontFamily="Constantia" VerticalAlignment="Center" Margin="12"></TextBlock>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="Groups" Height="50" Background="#444345" BorderBrush="LightGray">
+                    <ListViewItem x:Name="Groups" Height="70" Background="#444345" BorderBrush="#444345">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="resources\Groups.png" Width="27" Height="27" Margin="12"/>
-                            <TextBlock Text="Groups" VerticalAlignment="Center" Margin="10"></TextBlock>
+                            <Image Source="resources\group.png" Width="50" Height="50" Margin="3"/>
+                            <TextBlock Text="Groups" FontSize="25" FontFamily="Constantia" VerticalAlignment="Center" Margin="10"></TextBlock>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="Calls" Height="50" Background="#444345" BorderBrush="LightGray">
+                    <ListViewItem x:Name="Calls" Height="70" Background="#444345" BorderBrush="#444345">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="resources\Calls.png" Width="30" Height="30" Margin="10"/>
-                            <TextBlock Text="Calls" VerticalAlignment="Center" Margin="10"></TextBlock>
+                            <Image Source="resources\calls.png" Width="50" Height="50" Margin="3"/>
+                            <TextBlock Text="Calls" FontSize="25" FontFamily="Constantia" VerticalAlignment="Center" Margin="10"></TextBlock>
                         </StackPanel>
                     </ListViewItem>
-                    <ListViewItem x:Name="Settings" Height="50" Background="#444345" BorderBrush="LightGray">
-                        <StackPanel Orientation="Horizontal">
-                            <Image Source="resources\Settings.png" Width="25" Height="25" Margin="10"/>
-                            <TextBlock Text="Settings" VerticalAlignment="Center" Margin="10"></TextBlock>
+                    <ListViewItem x:Name="Settings" Height="70" Background="#444345" Margin="0 200 0 0" BorderBrush="#444345">
+                        <StackPanel Orientation="Horizontal" Height="60" Width="60">
+                            <Image Source="resources\settings.png" Width="50" Height="50" Margin="3"/>
+                            <TextBlock Text="Settings" FontSize="25" FontFamily="Constantia" VerticalAlignment="Center" Margin="10"></TextBlock>
                         </StackPanel>
                     </ListViewItem>
                 </ListView>
