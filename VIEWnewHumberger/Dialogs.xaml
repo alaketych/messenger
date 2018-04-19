@@ -1,0 +1,25 @@
+﻿<UserControl x:Class="VIEWnewHumberger.Dialogs"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VIEWnewHumberger"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="225">
+    <Grid>
+        <Button BorderBrush="{x:Null}" Background="Transparent">
+        </Button>
+        <Grid HorizontalAlignment="Left" Height="70" Width="70">
+            <Image x:Name="UserPhoto" Source="resources\userimage\DefaultImage.png" Height="40" Width="40" Margin="13,10,17,20"></Image>
+        </Grid>
+        <StackPanel>
+            <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Width="155" Height="35" Margin="0 13 0 0">
+                <TextBlock x:Name="NameSurname" TextWrapping="Wrap" Text="Anton Kusnetzov" HorizontalAlignment="Left" VerticalAlignment="Center"
+                           FontSize="17" FontFamily="Century Gothic" Foreground="#ff8000" Margin="0,-3,0,17"></TextBlock>
+                <TextBlock x:Name="Description" TextWrapping="Wrap" Text="Description" HorizontalAlignment="Left" VerticalAlignment="Center"
+                           FontSize="13" FontFamily="Century Gothic" Foreground="#444345" Margin="67,18,0,1"></TextBlock>
+            </Grid>
+            
+        </StackPanel>
+    </Grid>
+</UserControl>

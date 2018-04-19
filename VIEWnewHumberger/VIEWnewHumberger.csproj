@@ -42,6 +42,8 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -60,6 +62,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Chatting.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Dialogs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -67,6 +77,12 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Chatting.xaml.cs">
+      <DependentUpon>Chatting.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Dialogs.xaml.cs">
+      <DependentUpon>Dialogs.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -101,16 +117,34 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\mes.png" />
+    <Resource Include="resources\SideBar\mes.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\settings.png" />
+    <Resource Include="resources\SideBar\settings.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\group.png" />
+    <Resource Include="resources\SideBar\group.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="resources\calls.png" />
+    <Resource Include="resources\SideBar\calls.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\UserImage\DefaultImage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Chatting\background.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Chatting\clip.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Chatting\send.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Chatting\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Chatting\dots.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -34,3 +34,26 @@ D:\MASSENGER\VIEW MVVM\VIEWnewHumberger\VIEWnewHumberger\obj\Debug\VIEWnewHumber
 D:\MASSENGER\VIEW MVVM\VIEWnewHumberger\VIEWnewHumberger\obj\Debug\VIEWnewHumberger.csproj.GenerateResource.Cache
 D:\MASSENGER\VIEW MVVM\VIEWnewHumberger\VIEWnewHumberger\obj\Debug\VIEWnewHumberger.exe
 D:\MASSENGER\VIEW MVVM\VIEWnewHumberger\VIEWnewHumberger\obj\Debug\VIEWnewHumberger.pdb
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\bin\Debug\VIEWnewHumberger.exe.config
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\bin\Debug\VIEWnewHumberger.exe
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\bin\Debug\VIEWnewHumberger.pdb
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\bin\Debug\MaterialDesignColors.dll
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\VIEWnewHumberger.csprojResolveAssemblyReference.cache
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\MainWindow.g.cs
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\App.g.cs
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\VIEWnewHumberger_MarkupCompile.cache
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\VIEWnewHumberger_MarkupCompile.lref
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\MainWindow.baml
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\VIEWnewHumberger.g.resources
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\VIEWnewHumberger.Properties.Resources.resources
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\VIEWnewHumberger.csproj.GenerateResource.Cache
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\VIEWnewHumberger.exe
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\VIEWnewHumberger.pdb
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\Dialogs.g.cs
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\Dialogs.baml
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\Chatting.g.cs
+C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\obj\Debug\Chatting.baml
