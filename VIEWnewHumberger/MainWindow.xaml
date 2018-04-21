@@ -45,10 +45,53 @@
                 <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70"/>
             </DoubleAnimationUsingKeyFrames>
         </Storyboard>
+
+        <SolidColorBrush x:Key="Background" Color="#ffefde"></SolidColorBrush>
+        <SolidColorBrush x:Key="BackgroundPressed" Color="#ffffff"></SolidColorBrush>
+
+        <Style x:Key="SideButton+Search" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border" CornerRadius="35" Background="#e3e4e9" >
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource Background}"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource BackgroundPressed}"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SideHumberger" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border" Background="#c6c6c6">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource Background}"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource BackgroundPressed}"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
 
     <Grid>
-        <Grid VerticalAlignment="Top" Height="70" Background="#ff8000"></Grid>
+        <local:Status Margin="290,0,0,530"></local:Status>
         <Grid Margin="290,70,0,0">
             <local:Chatting></local:Chatting>
         </Grid>
@@ -61,7 +104,7 @@
         </Grid>
 
         <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="70" Width="225" Background="#e3e4e9" Margin="70, 0, 5, 0">
-            <Button VerticalAlignment="Center" HorizontalAlignment="Left" Height="40" Width="40" Margin="10,15,0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+            <Button Style="{StaticResource SideButton+Search}" VerticalAlignment="Center" HorizontalAlignment="Left" Height="40" Width="40" Margin="10,15,0,15" Background="{x:Null}" BorderBrush="{x:Null}">
                 <Image Source="resources\chatting\search.png" Height="20" Width="20"></Image>
             </Button>
             <RichTextBox HorizontalAlignment="Center" Width="150" Margin="55,15,18,15" BorderBrush="{x:Null}" MaxHeight="20" Background="#FFE3E4E9"></RichTextBox>
@@ -69,7 +112,7 @@
         <!--SideBarMenuProperties-->
         <Grid x:Name="SideBar" HorizontalAlignment="Left" Width="70" Background="#444345">
             <StackPanel>
-                <Button x:Name="SideBarMenu" HorizontalAlignment="Right" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" Width="70" Height="70" Click="SideBarMenu_Click">
+                <Button Style="{StaticResource SideHumberger}" x:Name="SideBarMenu" HorizontalAlignment="Right" VerticalAlignment="Top" Width="70" Height="70" Click="SideBarMenu_Click">
                     <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
                         <Rectangle x:Name="RectangleFirst" Width="30" Height="5" Margin="0 0 0 0" Fill="#ff8000" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="-0,0.5" RadiusX="2" RadiusY="2">
                             <Rectangle.RenderTransform>

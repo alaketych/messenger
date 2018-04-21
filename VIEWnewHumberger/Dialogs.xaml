@@ -6,8 +6,33 @@
              xmlns:local="clr-namespace:VIEWnewHumberger"
              mc:Ignorable="d" 
              d:DesignHeight="50" d:DesignWidth="225">
+
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="Background" Color="#e3e4e9"></SolidColorBrush>
+        <SolidColorBrush x:Key="BackgroundPressed" Color="#ffffff"></SolidColorBrush>
+
+        <Style x:Key="DialogButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border" CornerRadius="13" Background="#f1eff2" >
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource Background}"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource BackgroundPressed}"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid>
-        <Button BorderBrush="{x:Null}" Background="Transparent">
+        <Button Style="{StaticResource DialogButton}" Background="Transparent">
         </Button>
         <Grid HorizontalAlignment="Left" Height="70" Width="70">
             <Image x:Name="UserPhoto" Source="resources\userimage\DefaultImage.png" Height="40" Width="40" Margin="13,10,17,20"></Image>

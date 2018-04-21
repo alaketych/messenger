@@ -62,6 +62,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Status.xaml.cs">
+      <DependentUpon>Status.xaml</DependentUpon>
+    </Compile>
     <Page Include="Chatting.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -88,6 +91,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Status.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -145,6 +152,16 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="resources\Chatting\dots.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Status\soundoff.png" />
+    <Resource Include="resources\Status\soundon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Status\srch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="resources\Status\Untitled-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
