@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Laketych\Downloads\messenger-master\VIEWnewHumberger\obj\Debug\
+D:\VIEWnewHumberger\VIEWnewHumberger\obj\Debug\
 VIEWnewHumberger
 none
 false
 DEBUG;TRACE
-C:\Users\Laketych\Downloads\messenger-master\VIEWnewHumberger\App.xaml
-4-1669346649
+D:\VIEWnewHumberger\VIEWnewHumberger\App.xaml
+6-1034561338
 
-121766372986
-17-109485805
-Chatting.xaml;Dialogs.xaml;MainWindow.xaml;Status.xaml;
+151700733878
+17389802514
+Chatting.xaml;Dialogs.xaml;LoginUser.xaml;MainWindow.xaml;Registration.xaml;Status.xaml;
 
-True
+False
 
