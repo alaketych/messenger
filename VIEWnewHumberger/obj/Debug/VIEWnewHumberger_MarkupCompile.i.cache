@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\VIEWnewHumberger\VIEWnewHumberger\App.xaml
-6-1034561338
+6-1890444251
 
-151700733878
+151729704429
 17389802514
-Chatting.xaml;Dialogs.xaml;LoginUser.xaml;MainWindow.xaml;Registration.xaml;Status.xaml;
+View\MainMessenger\Chatting.xaml;View\MainMessenger\Dialogs.xaml;View\Entrance\LoginUser.xaml;View\MainMessenger\MainWindow.xaml;View\Entrance\Registration.xaml;View\MainMessenger\Status.xaml;
 
-False
+True
 

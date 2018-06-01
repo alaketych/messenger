@@ -1,0 +1,43 @@
+﻿<UserControl x:Class="VIEWnewHumberger.View.MainMessenger.Status"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VIEWnewHumberger.View.MainMessenger"
+             mc:Ignorable="d" 
+             d:DesignHeight="70" d:DesignWidth="785">
+    
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="Background" Color="#e3e4e9"></SolidColorBrush>
+        <SolidColorBrush x:Key="BackgroundPressed" Color="#ffffff"></SolidColorBrush>
+        
+        <Style x:Key="StatusButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border" CornerRadius="35" Background="#ff8000" >
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource Background}"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource BackgroundPressed}"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid Background="#ff8000">
+        <Button Style="{StaticResource StatusButton}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="50" Height="50" BorderBrush="{x:Null}" Background="#ff8000" Margin="0,10,2,10">
+            <Image x:Name="Search" Source="resources\status\soundoff.png" Height="20" Width="20"></Image>
+        </Button>
+        <Button Style="{StaticResource StatusButton}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="50" Height="50" BorderBrush="{x:Null}" Background="#ff8000" Margin="0 0 75 0">
+            <Image x:Name="Searchs" Source="resources\status\Untitled-1.png" Height="20" Width="20"></Image>
+        </Button>
+    </Grid>
+</UserControl>

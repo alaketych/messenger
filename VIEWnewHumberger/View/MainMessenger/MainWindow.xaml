@@ -1,0 +1,228 @@
+﻿<Window x:Class="VIEWnewHumberger.View.MainMessenger.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:VIEWnewHumberger.View.MainMessenger"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="600" Width="1080" WindowStyle="None" ResizeMode="CanMinimize" WindowStartupLocation="CenterScreen">
+    
+    <Window.Resources>
+        <!--SideBarMenuAnimation-->
+        <Storyboard x:Key="OpenSideBar">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="RectangleFirst">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="43.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="RectangleSecond">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="-43.5"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="RectangleThird">
+                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="SideBar">
+                <EasingDoubleKeyFrame KeyTime="0" Value="100"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="250"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <Storyboard x:Key="CloseSideBar">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="RectangleFirst">
+                <EasingDoubleKeyFrame KeyTime="0" Value="43.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="RectangleSecond">
+                <EasingDoubleKeyFrame KeyTime="0" Value="-43.5"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="RectangleThird">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="1"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="SideBar">
+                <EasingDoubleKeyFrame KeyTime="0" Value="250"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.5" Value="70"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+
+        <SolidColorBrush x:Key="Background" Color="#ffefde"></SolidColorBrush>
+        <SolidColorBrush x:Key="BackgroundPressed" Color="#ffffff"></SolidColorBrush>
+
+        <Style x:Key="SideButton+Search" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border" CornerRadius="35" Background="#e3e4e9" >
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource Background}"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource BackgroundPressed}"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="SideHumberger" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border" Background="#c6c6c6">
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource Background}"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource BackgroundPressed}"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="ScrollThumbs" TargetType="{x:Type Thumb}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Thumb}">
+                        <Grid x:Name="Grid">
+                            <Rectangle HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="Auto" Height="Auto" />
+                            <Border CornerRadius="3" Width="Auto" Height="Auto" Background="{TemplateBinding Background}" />
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+
+        <Style x:Key="{x:Type ScrollBar}" TargetType="{x:Type ScrollBar}">
+            <Setter Property="Foreground" Value="#ff8000" />
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type ScrollBar}">
+                        <Grid Width="5" Background="{TemplateBinding Background}">
+                            <Track x:Name="PART_Track" IsDirectionReversed="true" Focusable="false">
+                                <Track.Thumb>
+                                    <Thumb x:Name="Thumb" Background="{TemplateBinding Foreground}" Style="{DynamicResource ScrollThumbs}" />
+                                </Track.Thumb>
+                            </Track>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger SourceName="Thumb" Property="IsMouseOver" Value="true">
+                                <Setter Value="{DynamicResource ButtonSelectBrush}" TargetName="Thumb" Property="Background" />
+                            </Trigger>
+                            <Trigger SourceName="Thumb" Property="IsDragging" Value="true">
+                                <Setter Value="{DynamicResource DarkBrush}" TargetName="Thumb" Property="Background"/>
+                            </Trigger>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter TargetName="Thumb" Property="Visibility" Value="Collapsed" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+
+    <Grid>
+        <local:Status Margin="290,0,0,530"></local:Status>
+        <Grid Margin="290,70,0,0">
+            <local:Chatting></local:Chatting>
+        </Grid>
+        <Grid HorizontalAlignment="Left" Width="225" Background="#f1eff2" Margin="70 70 0 0">
+            <ScrollViewer>
+                <StackPanel>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                    <local:Dialogs></local:Dialogs>
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+
+        <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="70" Width="225" Background="#e3e4e9" Margin="70, 0, 5, 0">
+            <Button Style="{StaticResource SideButton+Search}" VerticalAlignment="Center" HorizontalAlignment="Left" Height="40" Width="40" Margin="10,15,0,15" Background="{x:Null}" BorderBrush="{x:Null}">
+                <Image Source="resources\chatting\search.png" Height="20" Width="20"></Image>
+            </Button>
+            <RichTextBox HorizontalAlignment="Center" Width="150" Margin="55,15,18,15" BorderBrush="{x:Null}" MaxHeight="20" Background="#FFE3E4E9"></RichTextBox>
+        </Grid>
+        <!--SideBarMenuProperties-->
+        <Grid x:Name="SideBar" HorizontalAlignment="Left" Width="70" Background="#444345">
+            <StackPanel>
+                <Button Style="{StaticResource SideHumberger}" x:Name="SideBarMenu" HorizontalAlignment="Right" VerticalAlignment="Top" Width="70" Height="70" Click="SideBarMenu_Click">
+                    <Grid HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Rectangle x:Name="RectangleFirst" Width="30" Height="5" Margin="0 0 0 0" Fill="#ff8000" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="-0,0.5" RadiusX="2" RadiusY="2">
+                            <Rectangle.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
+                        <Rectangle x:Name="RectangleSecond" Width="30" Height="5" Margin="0 20 0 0 " Fill="#ff8000" HorizontalAlignment="Center" VerticalAlignment="Top" RenderTransformOrigin="-0,0.5" RadiusX="2" RadiusY="2">
+                            <Rectangle.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
+                        <Rectangle x:Name="RectangleThird" Width="30" Height="5" Margin="0 10 0 0" Fill="#ff8000" HorizontalAlignment="Center" VerticalAlignment="Top" RadiusX="2" RadiusY="2"></Rectangle>
+                    </Grid>
+                </Button>
+
+                <!--SubmenuButtons-->
+                <ListView BorderBrush="#FF444345" Background="#FF444345">
+                    <ListViewItem x:Name="Messages" Height="70" Background="#444345" BorderBrush="#444345" IsSelected="True">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="resources\sidebar\mes.png" Width="50" Height="50" Margin="3"/>
+                            <TextBlock Text="Messages" FontSize="25" FontFamily="Century Gothic" Foreground="#ff8000" VerticalAlignment="Center" Margin="12"></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="Groups" Height="70" Background="#444345" BorderBrush="#444345">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="resources\sidebar\group.png" Width="50" Height="50" Margin="3"/>
+                            <TextBlock Text="Groups" FontSize="25" FontFamily="Century Gothic" Foreground="#ff8000" VerticalAlignment="Center" Margin="10"></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="Calls" Height="70" Background="#444345" BorderBrush="#444345">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="resources\sidebar\calls.png" Width="50" Height="50" Margin="3"/>
+                            <TextBlock Text="Calls" FontSize="25" FontFamily="Century Gothic" Foreground="#ff8000" VerticalAlignment="Center" Margin="10"></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                    <ListViewItem x:Name="Settings" Height="70" Background="#444345" Margin="0 246 0 0"  BorderBrush="#444345">
+                        <StackPanel Orientation="Horizontal">
+                            <Image Source="resources\sidebar\settings.png" Width="50" Height="50" Margin="0 3 0 0"/>
+                            <TextBlock Text="Settings" FontSize="25" FontFamily="Century Gothic" Foreground="#ff8000" Margin="20 17 0 20"></TextBlock>
+                        </StackPanel>
+                    </ListViewItem>
+                </ListView>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>

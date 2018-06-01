@@ -1,0 +1,51 @@
+﻿<UserControl x:Class="VIEWnewHumberger.View.MainMessenger.Chatting"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:VIEWnewHumberger.View.MainMessenger"
+             mc:Ignorable="d" 
+             d:DesignHeight="530" d:DesignWidth="785">
+
+    <UserControl.Resources>
+        <SolidColorBrush x:Key="Background" Color="#ffefde"></SolidColorBrush>
+        <SolidColorBrush x:Key="BackgroundPressed" Color="#e3e4e9"></SolidColorBrush>
+
+        <Style x:Key="ChattingButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border x:Name="Border" CornerRadius="35" Background="#ffffff" >
+                            <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource Background}"></Setter>
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter TargetName="Border" Property="Background" Value="{StaticResource BackgroundPressed}"></Setter>
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
+
+    <Grid>
+        <Grid Background="#ffffff" Margin="0 0 0 50">
+            <Image Source="resources\Chatting\background.jpg" Margin="0,10,0,-10"></Image>
+        </Grid>
+        <Grid VerticalAlignment="Bottom" Height="70" Background="#ffffff">
+            <Button Style="{StaticResource ChattingButton}" x:Name="ClipButton" Height="70" Width="70" HorizontalAlignment="Left" Margin="5 0 0 0">
+                <Image Source="resources\chatting\clip.png" Width="30" Height="30"/>
+            </Button>
+            <Button Style="{StaticResource ChattingButton}" x:Name="SendButton" Height="70" Width="70" HorizontalAlignment="Right" Margin="0 0 0 0" Background="{x:Null}" BorderBrush="White">
+                <Image Source="resources\chatting\send.png" Width="35" Height="35"></Image>
+            </Button>
+            <RichTextBox HorizontalAlignment="Center" Width="630" Margin="80,0,75,0" BorderBrush="{x:Null}" MaxHeight="50" >
+                
+            </RichTextBox>
+        </Grid>
+    </Grid>
+</UserControl>
