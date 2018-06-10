@@ -41,7 +41,7 @@
             <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Width="155" Height="35" Margin="0 13 0 0">
                 <TextBlock x:Name="NameSurname" TextWrapping="Wrap" Text="Alexandr Laketych" HorizontalAlignment="Left" VerticalAlignment="Center"
                            FontSize="17" FontFamily="Century Gothic" Foreground="#ff8000" Margin="0,-3,0,17"></TextBlock>
-                <TextBlock x:Name="Description" TextWrapping="Wrap" Text="Description" HorizontalAlignment="Left" VerticalAlignment="Center"
+                <TextBlock x:Name="Description" TextWrapping="Wrap" Text="Descriptions" HorizontalAlignment="Left" VerticalAlignment="Center"
                            FontSize="13" FontFamily="Century Gothic" Foreground="#444345" Margin="67,18,0,1"></TextBlock>
             </Grid>
             
