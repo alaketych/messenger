@@ -162,7 +162,7 @@
 
         <Grid VerticalAlignment="Top" HorizontalAlignment="Left" Height="70" Width="225" Background="#e3e4e9" Margin="70, 0, 5, 0">
             <Button Style="{StaticResource SideButton+Search}" VerticalAlignment="Center" HorizontalAlignment="Left" Height="40" Width="40" Margin="10,15,0,15" Background="{x:Null}" BorderBrush="{x:Null}">
-                <Image Source="resources\chatting\search.png" Height="20" Width="20"></Image>
+                <Image Source="C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\resources\Chatting\search.png" Height="20" Width="20"></Image>
             </Button>
             <RichTextBox HorizontalAlignment="Center" Width="150" Margin="55,15,18,15" BorderBrush="{x:Null}" MaxHeight="20" Background="#FFE3E4E9"></RichTextBox>
         </Grid>
@@ -199,25 +199,25 @@
                 <ListView BorderBrush="#FF444345" Background="#FF444345">
                     <ListViewItem x:Name="Messages" Height="70" Background="#444345" BorderBrush="#444345" IsSelected="True">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="resources\sidebar\mes.png" Width="50" Height="50" Margin="3"/>
+                            <Image Source="C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\resources\\sidebar\mes.png" Width="50" Height="50" Margin="3"/>
                             <TextBlock Text="Messages" FontSize="25" FontFamily="Century Gothic" Foreground="#ff8000" VerticalAlignment="Center" Margin="12"></TextBlock>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="Groups" Height="70" Background="#444345" BorderBrush="#444345">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="resources\sidebar\group.png" Width="50" Height="50" Margin="3"/>
+                            <Image Source="C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\resources\sidebar\group.png" Width="50" Height="50" Margin="3"/>
                             <TextBlock Text="Groups" FontSize="25" FontFamily="Century Gothic" Foreground="#ff8000" VerticalAlignment="Center" Margin="10"></TextBlock>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="Calls" Height="70" Background="#444345" BorderBrush="#444345">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="resources\sidebar\calls.png" Width="50" Height="50" Margin="3"/>
+                            <Image Source="C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\resources\sidebar\calls.png" Width="50" Height="50" Margin="3"/>
                             <TextBlock Text="Calls" FontSize="25" FontFamily="Century Gothic" Foreground="#ff8000" VerticalAlignment="Center" Margin="10"></TextBlock>
                         </StackPanel>
                     </ListViewItem>
                     <ListViewItem x:Name="Settings" Height="70" Background="#444345" Margin="0 246 0 0"  BorderBrush="#444345">
                         <StackPanel Orientation="Horizontal">
-                            <Image Source="resources\sidebar\settings.png" Width="50" Height="50" Margin="0 3 0 0"/>
+                            <Image Source="C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\resources\sidebar\settings.png" Width="50" Height="50" Margin="0 3 0 0"/>
                             <TextBlock Text="Settings" FontSize="25" FontFamily="Century Gothic" Foreground="#ff8000" Margin="20 17 0 20"></TextBlock>
                         </StackPanel>
                     </ListViewItem>

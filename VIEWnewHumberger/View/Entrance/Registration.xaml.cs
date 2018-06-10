@@ -19,6 +19,8 @@ namespace VIEWnewHumberger.View.Entrance
 {
     public partial class Registration : Window
     {
+        LoginUser backLoginUser = new LoginUser();
+
         public Registration()
         {
             InitializeComponent();
@@ -33,8 +35,13 @@ namespace VIEWnewHumberger.View.Entrance
 
             DAL.ExecSP("CreateUser", sqlParams);
             MessageBox.Show("You have been registrated.");
+            
+            backLoginUser.Show();
+            this.Close();
+        }
 
-            LoginUser backLoginUser = new LoginUser();
+        private void BackToLogin_Click(object sender, RoutedEventArgs e)
+        {
             backLoginUser.Show();
             this.Close();
         }

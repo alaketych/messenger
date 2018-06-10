@@ -85,11 +85,11 @@
         </Grid>
         <Separator Width="300" Background="#ff8000" Height="5"></Separator>
         <Grid x:Name="UserName" Height="30" Width="250" Margin="0 30 0 0">
-            <Image Source="resources\UserImage\DefaultImage.png" HorizontalAlignment="Left"></Image>
+            <Image Source="C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\resources\UserImage\DefaultImage.png" HorizontalAlignment="Left"></Image>
             <TextBox x:Name="txtUserName" Margin="50,0,10,0"></TextBox>
         </Grid>
         <Grid x:Name="Password" Height="30" Width="250" Margin="0 20 0 0">
-            <Image Source="resources\UserImage\DefaultImage.png" HorizontalAlignment="Left"></Image>
+            <Image Source="C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\resources\UserImage\DefaultImage.png" HorizontalAlignment="Left"></Image>
             <TextBox x:Name="txtPassword" Margin="50,0,10,0"></TextBox>
         </Grid>
         <Grid>

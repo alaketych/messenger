@@ -35,7 +35,7 @@
         <Button Style="{StaticResource DialogButton}" Background="Transparent">
         </Button>
         <Grid HorizontalAlignment="Left" Height="70" Width="70">
-            <Image x:Name="UserPhoto" Source="resources\userimage\DefaultImage.png" Height="40" Width="40" Margin="13,5,17,20"></Image>
+            <Image x:Name="UserPhoto" Source="C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\resources\userimage\DefaultImage.png" Height="40" Width="40" Margin="13,5,17,20"></Image>
         </Grid>
         <StackPanel>
             <Grid VerticalAlignment="Top" HorizontalAlignment="Right" Width="155" Height="35" Margin="0 13 0 0">

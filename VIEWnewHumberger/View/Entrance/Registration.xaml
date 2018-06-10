@@ -53,12 +53,59 @@
                 </Setter.Value>
             </Setter>
         </Style>
+
+        <Style x:Key="BackToLogin" TargetType="{x:Type Button}">
+            <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+            <Setter Property="Background" Value="Transparent"/>
+            <Setter Property="BorderBrush" Value="#ffffff"/>
+            <Setter Property="BorderThickness" Value="1"/>
+            <Setter Property="Foreground" Value="#333333"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="VerticalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="16,3,16,3"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Border Name="Chrome"
+                                Background="{TemplateBinding Background}"
+                                BorderBrush="{TemplateBinding BorderBrush}"
+                                BorderThickness="{TemplateBinding BorderThickness}"
+                                SnapsToDevicePixels="true">
+                            <ContentPresenter Name="Presenter" Margin="{TemplateBinding Padding}"
+                                    VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                    HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                    RecognizesAccessKey="True"
+                                    SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                        </Border>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsEnabled" Value="false">
+                                <Setter Property="Foreground" Value="#333333" />
+                            </Trigger>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Background" Value="#ff8000" />
+                                <Setter Property="BorderBrush" Value="#e3e4e5" />
+                                <Setter Property="Foreground" Value="#333333" />
+                            </Trigger>
+                            <Trigger Property="IsPressed" Value="True">
+                                <Setter Property="Background" Value="#be3c3e" />
+                                <Setter Property="BorderBrush" Value="#be3c3e"/>
+                                <Setter Property="Foreground" Value="White"/>
+                            </Trigger>
+                            <Trigger Property="IsFocused" Value="true">
+                                <Setter TargetName="Chrome" Property="BorderBrush" Value="#ff8000" />
+                            </Trigger>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
 
     <Grid>
         <Grid Width="350" HorizontalAlignment="Left" Margin="0,0,0,0">
-            <Image Source="resources\Registration\Background\RegistationBackGround.png"/>
+            <Image Source="C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\resources\Registration\Background\RegistationBackGround.png"/>
             <Label FontSize="40" VerticalAlignment="Center" HorizontalAlignment="Center" FontWeight="Bold" Margin="0 0 0 90">HELLO WORLD</Label>
+            <Button x:Name="BackToLogin" Style="{StaticResource BackToLogin}" Foreground="White" Height="30" Width="150" HorizontalAlignment="Center" Margin="0 400 0 0" Click="BackToLogin_Click" >LOGIN</Button>
         </Grid>
         <Grid Width="380" HorizontalAlignment="Right" Background="#ffffff">
             <StackPanel>
@@ -108,7 +155,7 @@
                     <RadioButton Height="15" Width="15" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="90,5,0,4"></RadioButton>
                     <Label Width="227" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="10" Margin="0,4,38, 5">I Accept terms and conditions privacy policy</Label>
                 </Grid>
-                <Button x:Name="RegistationButton" Style="{StaticResource RegistrationButton}" Height="30" Width="150" HorizontalAlignment="Center" Margin="0 25 0 0" Click="RegistationButton_Click_1">LOGIN</Button>
+                <Button x:Name="RegistationButton" Style="{StaticResource RegistrationButton}" Height="30" Width="150" HorizontalAlignment="Center" Margin="0 25 0 0" Click="RegistationButton_Click_1">REGISTRATION</Button>
             </StackPanel>
         </Grid>
     </Grid>

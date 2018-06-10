@@ -34,10 +34,10 @@
 
     <Grid Background="#ff8000">
         <Button Style="{StaticResource StatusButton}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="50" Height="50" BorderBrush="{x:Null}" Background="#ff8000" Margin="0,10,2,10">
-            <Image x:Name="Search" Source="resources\status\soundoff.png" Height="20" Width="20"></Image>
+            <Image x:Name="Search" Source="C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\resources\status\soundoff.png" Height="20" Width="20"></Image>
         </Button>
         <Button Style="{StaticResource StatusButton}" HorizontalAlignment="Right" VerticalAlignment="Center" Width="50" Height="50" BorderBrush="{x:Null}" Background="#ff8000" Margin="0 0 75 0">
-            <Image x:Name="Searchs" Source="resources\status\Untitled-1.png" Height="20" Width="20"></Image>
+            <Image x:Name="Searchs" Source="C:\Users\Laketych\Downloads\messenger-master\messenger-master\VIEWnewHumberger\resources\status\Untitled-1.png" Height="20" Width="20"></Image>
         </Button>
     </Grid>
 </UserControl>
