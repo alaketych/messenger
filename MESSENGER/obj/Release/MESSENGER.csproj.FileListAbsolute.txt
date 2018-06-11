@@ -1,0 +1,10 @@
+C:\Users\Laketych\source\repos\MESSENGER\MESSENGER\obj\Release\View\Entrance\LoginUser.g.cs
+C:\Users\Laketych\source\repos\MESSENGER\MESSENGER\obj\Release\View\Entrance\Registration.g.cs
+C:\Users\Laketych\source\repos\MESSENGER\MESSENGER\obj\Release\View\MainMessenger\Chatting.g.cs
+C:\Users\Laketych\source\repos\MESSENGER\MESSENGER\obj\Release\View\MainMessenger\Dialogs.g.cs
+C:\Users\Laketych\source\repos\MESSENGER\MESSENGER\obj\Release\View\MainMessenger\MainWindow.g.cs
+C:\Users\Laketych\source\repos\MESSENGER\MESSENGER\obj\Release\View\MainMessenger\Status.g.cs
+C:\Users\Laketych\source\repos\MESSENGER\MESSENGER\obj\Release\App.g.cs
+C:\Users\Laketych\source\repos\MESSENGER\MESSENGER\obj\Release\GeneratedInternalTypeHelper.g.cs
+C:\Users\Laketych\source\repos\MESSENGER\MESSENGER\obj\Release\MESSENGER_MarkupCompile.cache
+C:\Users\Laketych\source\repos\MESSENGER\MESSENGER\obj\Release\MESSENGER_MarkupCompile.lref
