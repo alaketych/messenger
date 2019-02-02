@@ -2,5 +2,5 @@
 
 mistake were made.
 
-SOLUTION - VIEWnewHumberger is uncorrect.
+SOLUTION - VIEWnewHumberger is incorrect.
            MESSENGER - correct.
