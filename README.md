@@ -1,6 +1,6 @@
 # messenger
 
-mistake were made.
+mistake was made.
 
 SOLUTION - VIEWnewHumberger is incorrect.
            MESSENGER - correct.
